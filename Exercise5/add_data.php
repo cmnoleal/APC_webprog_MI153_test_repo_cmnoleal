@@ -14,7 +14,7 @@ if(isset($_POST['btn-save']))
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users (name,naickname,email_add,contact_no,gender,comment) VALUES('$name','$nickname','$email_add','$contact_no','$gender','$comment')";
+        $sql_query = "INSERT INTO users (name,nickname,email_add,contact_no,gender,comment) VALUES('$name','$nickname','$email_add','$contact_no','$gender','$comment')";
  mysqli_query($sql_query);
         
         // sql query for inserting data into database
@@ -25,8 +25,89 @@ if(isset($_POST['btn-save']))
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>CRUD Operations With PHP and MySql - By Cleartuts</title>
-<link rel="stylesheet" href="style.css" type="text/css" />
 </head>
+<style>
+{
+ margin:0;
+ padding:0;
+}
+body
+{
+ background:black;
+ font-family:Courier;
+}
+#header
+{
+ width:100%;
+ height:50px;
+ background:Black;
+ color:#f9f9f9;
+ font-family:courier;
+ font-size:35px;
+ text-align:center;
+}
+#header a
+{
+ color:#fff;
+ text-decoration:blink;
+}
+#body
+{
+ margin-top:50px;
+}
+table
+{
+ width:80%;
+ font-family:courier;
+ font-weight:bolder;
+ color:#999;
+ margin-bottom:80px;
+}
+table a
+{
+ text-decoration:none;
+ color:white;
+}
+table,td,th
+{
+ border-collapse:collapse;
+ border:solid #d0d0d0 1px;
+ padding:20px;
+}
+table td input
+{
+ width:97%;
+ height:35px;
+ border:dashed #00a2d1 1px;
+ padding-left:15px;
+ font-family:courier;
+ box-shadow:0px 0px 0px rgba(1,0,0,0.2);
+ outline:none;
+}
+table td input:focus
+{
+ box-shadow:inset 1px 1px 1px rgba(1,0,0,0.2);
+ outline:none;
+}
+table td button
+{
+ border:solid #f9f9f9 0px;
+ box-shadow:1px 1px 1px rgba(1,0,0,0.2);
+ outline:none;
+ background:white;
+ padding:9px 15px 9px 15px;
+ color:black;
+ font-family:courier;
+ font-weight:bolder;
+ border-radius:3px;
+ width:49.5%;
+}
+table td button:active
+{
+ position:relative;
+ top:1px;
+}
+</style>
 <body>
 <center>
 
