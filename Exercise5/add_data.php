@@ -4,15 +4,18 @@ include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
+ $name = $_POST['name'];
+ $nickname = $_POST['nickname'];
+ $email_add = $_POST['email_add'];
+ $contact_no = $_POST['contact_no'];
+ $gender = $_POST['gender'];
+ $comment = $_POST['comment'];
  // variables for input data
  
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
- mysql_query($sql_query);
+        $sql_query = "INSERT INTO users (name,naickname,email_add,contact_no,gender,comment) VALUES('$name','$nickname','$email_add','$contact_no','$gender','$comment')";
+ mysqli_query($sql_query);
         
         // sql query for inserting data into database
  
@@ -29,7 +32,7 @@ if(isset($_POST['btn-save']))
 
 <div id="header">
  <div id="content">
-    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    <label>Who's viewing this?</label>
     </div>
 </div>
 <div id="body">
@@ -40,13 +43,22 @@ if(isset($_POST['btn-save']))
     <td align="center"><a href="index.php">back to main page</a></td>
     </tr>
     <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" required /></td>
+    <td><input type="text" name="name" placeholder="Name" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
+    <td><input type="text" name="nickname" placeholder="Nickname"  /></td>
     </tr>
     <tr>
-    <td><input type="text" name="city_name" placeholder="City" required /></td>
+    <td><input type="text" name="email_add" placeholder="Email Address"  /></td>
+    </tr>
+	<tr>
+    <td><input type="text" name="contact_no" placeholder="Contact Number"  /></td>
+    </tr>
+	 <tr>
+    <td><input type="text" name="gender" placeholder="Gender (M or F)" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="comment" placeholder="Comment (Something about you)"  /></td>
     </tr>
     <tr>
     <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
