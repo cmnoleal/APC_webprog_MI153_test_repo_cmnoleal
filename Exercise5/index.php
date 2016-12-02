@@ -5,7 +5,7 @@ include_once 'dbconfig.php';
 if(isset($_GET['delete_id']))
 {
  $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
- mysql_query($sql_query);
+ mysqli_query($con, $sql_query);
  header("Location: $_SERVER[PHP_SELF]");
 }
 // delete condition
@@ -150,7 +150,7 @@ table td button:active
  <div id="content">
     <table align="center">
     <tr>
-    <th colspan="7"><a href="add_data.php">add data here.</a></th>
+    <th colspan="8"><a href="add_data.php"><center>add data here.</center></a></th>
     </tr>
     <th>Name</th>
     <th>Nickname</th>
