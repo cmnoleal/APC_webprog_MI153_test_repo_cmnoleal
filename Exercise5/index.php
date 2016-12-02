@@ -36,6 +36,29 @@ function delete_id(id)
 <body>
 <center>
 <style>
+#page{
+	font-family:courier;
+	font-size:20px;
+	color:white;
+	background-color:black;
+}
+table {
+    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 55%;
+}
+
+td, th {
+    border: 5px solid rgb(128,128,128);
+    text-align: left;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: black;
+}
+
 {
  margin:0;
  padding:0;
