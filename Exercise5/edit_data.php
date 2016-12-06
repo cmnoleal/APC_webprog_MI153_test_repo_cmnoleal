@@ -3,7 +3,7 @@ include_once 'dbconfig.php';
 if(isset($_GET['edit_id']))
 {
  $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
- $result_set=mysqli_query($sql_query);
+ $result_set=mysqli_query($con, $sql_query);
  $fetched_row=mysqli_fetch_array($result_set);
 }
 if(isset($_POST['btn-update']))
@@ -149,22 +149,22 @@ table td button:active
     <form method="post">
     <table align="center">
     <tr>
-    <td><input type="text" name="name" placeholder="Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
+    <td><input type="text" name="name" placeholder="Name" value="<?php echo $fetched_row['name']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
+    <td><input type="text" name="nickname" placeholder="Nickname" value="<?php echo $fetched_row['nickname']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="email_add" placeholder="Email Address" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    <td><input type="text" name="email_add" placeholder="Email Address" value="<?php echo $fetched_row['email_add']; ?>" required /></td>
     </tr>
 	 <tr>
-    <td><input type="text" name="contact_no" placeholder="Contact number" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
+    <td><input type="text" name="contact_no" placeholder="Contact number" value="<?php echo $fetched_row['contact_no']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="gender" placeholder="Gender (M or F)" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
+    <td><input type="text" name="gender" placeholder="Gender (M or F)" value="<?php echo $fetched_row['gender']; ?>" required /></td>
     </tr>
     <tr>
-    <td><input type="text" name="comment" placeholder="Comment (Something about yourself)" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    <td><input type="text" name="comment" placeholder="Comment (Something about yourself)" value="<?php echo $fetched_row['comment']; ?>" required /></td>
     </tr>
     <tr>
     <td>
