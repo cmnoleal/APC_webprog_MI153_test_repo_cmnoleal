@@ -1,5 +1,42 @@
+<style>
+#table{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
+#t1{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
+#t2{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
+#t3{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
+</style>
+
+
+
 <center><h2><?php echo $title; ?></h2>
-<table border='1' cellpadding='4'> 
+<table id = 'table' border='1' cellpadding='4'> 
     <tr>
         <td><strong>Title</strong></td>
         <td><strong>Content</strong></td>
@@ -10,12 +47,12 @@
             <td><?php echo $news_item['title']; ?></td>
             <td><?php echo $news_item['text']; ?></td>
             <td>
-                <a href="<?php echo site_url('news/'.$news_item['slug']); ?>">
+                <center><a href="<?php echo site_url('news/'.$news_item['slug']); ?>">
 View</a> |
                 <a href="<?php echo site_url('news/edit/'.$news_item['id']);
 ?>">Edit</a> |
                 <a href="<?php echo site_url('news/delete/'.$news_item['id']);
-?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a>
+?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a></center>
             </td>
         </tr>
 <?php endforeach; ?>
@@ -23,23 +60,23 @@ View</a> |
 </table>
 </center>
 <body id ="page">  <center>
-<p style="color:white;font-size:20;">-----------------------------------------------------------------------------------------------------------------------------------------</p>
+<p style="color:white;font-size:18;">-----------------------------------------------------------------------------------------------------------------------------------------</p>
 
 <h1 style ="color:white;font-family:courier;"> <center> HELLO! WELCOME TO MY PERSONAL WEBSITE! <center> </h1>
 
-<table>
+<table id = 't1'><center>
   <tr>
     <th style = "color:white;">Name:</th>
   </tr>
 
   <tr>
-    <td style = "color:white;">Carl Justine Noleal</td>
+    <td style = "color:white;"><center>Carl Justine Noleal</center></td>
   </tr>
-</table>
+</center></table>
 
-<p style="color:white;font-size:20;">-----------------------------------------------------------------------------------------------------------------------------------------</p>
+<p style="color:white;font-size:18;">-----------------------------------------------------------------------------------------------------------------------------------------</p>
 
-<table>
+<table id = 't2'>
   <tr>
     <th style = "color:white;">
 	Nicknames:
@@ -47,13 +84,13 @@ View</a> |
   </tr>
 
   <tr>
-    <td style = "color:white;">Carl, Justin, Jus, CJ</td>
+    <td style = "color:white;"><center>Carl, Justin, Jus, CJ</center></td>
   </tr>
 </table>
 
-<p style="color:white;font-size:20;">-----------------------------------------------------------------------------------------------------------------------------------------</p>
+<p style="color:white;font-size:18;">-----------------------------------------------------------------------------------------------------------------------------------------</p>
 
-<table>
+<table id = 't3'>
   <tr>
     <th style = "color:white;">Hobies:</th>
     <th style = "color:white;"></th>
