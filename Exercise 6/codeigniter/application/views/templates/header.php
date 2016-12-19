@@ -11,7 +11,7 @@
 }
 #title{
 	font-family:courier;
-	font-size:20px;
+	font-size:30px;
 	color:white;
 	background-color:black;
 }
@@ -23,7 +23,7 @@
 }
 </style>
         <body id = 'body'>
-                <h1 id = 'title'>POGI KO</h1>
+                <h1 id = 'title'><center>Who's viewing this?</center></h1>
                 <p id ='links'><a href="<?php echo site_url('news'); ?>">Home</a> | <a href="<?php echo site_url('news/create'); ?>">Add News</a></p>
 </body>
 </html>
