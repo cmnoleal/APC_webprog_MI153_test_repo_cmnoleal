@@ -11,7 +11,7 @@
 	    font-size:100%;
     font-family: courier;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
 	 border:solid #d0d0d0 1px;
  padding:20px;
 }
@@ -19,7 +19,7 @@
 	    font-size:100%;
     font-family: courier;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
 	 border:solid #d0d0d0 1px;
  padding:20px;
 }
@@ -27,7 +27,7 @@
 	    font-size:100%;
     font-family: courier;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
 	 border:solid #d0d0d0 1px;
  padding:20px;
 }
@@ -123,7 +123,7 @@ View</a> |
 
   <tr>
    <td id="web"; style = "color:white;"> <center>What is my favorite website?</center>
-   <center> <button type="button"; style = "background-color:black;color:White;font-family:courier;font-size:100%" onclick="document.getElementById('web').innerHTML = '9gag I think? Hmm.'">Want to know?!</button></center>
+   <center> <button type="button"; style = "background-color:black;color:White;font-family:courier;font-size:100%" onclick="document.getElementById('web').innerHTML ='9gag I think? Hmm.'">Want to know?!</button></center>
     </td>
     <td>
 	<img id = "9gag"; src="9gag.png" alt = "9gag" style ="width:550px;height:200;">
