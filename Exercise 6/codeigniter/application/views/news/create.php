@@ -1,3 +1,4 @@
+<center>
 <h2><?php echo $title; ?></h2>
 <?php echo validation_errors(); ?>
 <?php echo form_open('news/create'); ?>    
@@ -15,5 +16,5 @@
             <td><input type="submit" name="submit" value="Create news item"
 /></td>
         </tr>
-    </table>    
+    </table>   </center>
 </form>
