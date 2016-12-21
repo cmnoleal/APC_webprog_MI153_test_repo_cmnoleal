@@ -16,28 +16,27 @@
 <table id = 'table'>
         <tr>
             <td><label for="name">Name:</label></td>
-            <td><input type="input" name="title" size="50" /></td>
+            <td><input type="input" name="name" size="50" /></td>
         </tr>
         <tr>
             <td><label for="nickname">Nicknames:</label></td>
-            <td><textarea name="text" rows="4" cols="44.5"></textarea></td>
+            <td><textarea name="nickname" rows="4" cols="44.5"></textarea></td>
         </tr>
         <tr>
             <td><label for="email_add">Email address:</label></td>
-            <td><input type="input" name="title" size="50" /></td>
+            <td><input type="input" name="email_add" size="50" /></td>
         </tr>
         <tr>
             <td><label for="contact_no">Contact number:</label></td>
-            <td><input type="input" name="title" size="50" /></td>
+            <td><input type="input" name="contact_no" size="50" /></td>
         </tr>
         <tr>
-            <td><label for="gender">Gender:</label></td>
-            <td><input type="input" name="title" size="1	" /></td>
+            <td><label for="gender">Gender (M or F):</label></td>
+            <td><input type="input" name="gender" size="1	" /></td>
         </tr>
-		</tr>
         <tr>
             <td><label for="comment">Comment:</label></td>
-            <td><input type="input" name="title" size="1	" /></td>
+            <td><textarea name="comment" rows="4" cols="44.5"></textarea></td>
         </tr>
         <tr>
             <td></td>

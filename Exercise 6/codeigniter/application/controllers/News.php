@@ -11,14 +11,14 @@ class News extends CI_Controller {
     public function index()
     {
         $data['news'] = $this->news_model->get_news();
-        $data['title'] = 'News archive';
+        $data['title'] = 'Website Visitors';
  
         $this->load->view('templates/header', $data);
         $this->load->view('news/index', $data);
         $this->load->view('templates/footer');
     }
  
-    public function view($slug = NULL)
+    public function view($user_id = NULL)
     {
         $data['news_item'] = $this->news_model->get_news($slug);
         
@@ -39,13 +39,14 @@ class News extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
  
-        $data['title'] = 'Create a news item';
+        $data['title'] = 'Welcome!';
  
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('nickname', 'Nicknames', 'required');
 		$this->form_validation->set_rules('email_add', 'Email Address', 'required');
         $this->form_validation->set_rules('contact_no', 'Contact Number', 'required');
 		$this->form_validation->set_rules('gender', 'Gender', 'required');
+		$this->form_validation->set_rules('comment', 'Comment', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
@@ -65,9 +66,9 @@ class News extends CI_Controller {
     
     public function edit()
     {
-        $id = $this->uri->segment(3);
+        $user_id = $this->uri->segment(3);
         
-        if (empty($id))
+        if (empty($user_id))
         {
             show_404();
         }
@@ -75,10 +76,15 @@ class News extends CI_Controller {
         $this->load->helper('form');
         $this->load->library('form_validation');
         
-        $data['title'] = 'Edit a news item';        
-        $data['news_item'] = $this->news_model->get_news_by_id($id);
+        $data['title'] = 'Need to change something?';        
+        $data['news_item'] = $this->news_model->get_news_by_id($user_id);
         
         $this->form_validation->set_rules('name', 'Name', 'required');
+		$this->form_validation->set_rules('nickname', 'Nicknames', 'required');
+		$this->form_validation->set_rules('email_add', 'Email Address', 'required');
+        $this->form_validation->set_rules('contact_no', 'Contact Number', 'required');
+		$this->form_validation->set_rules('gender', 'Gender', 'required');
+		$this->form_validation->set_rules('comment', 'Comment', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
@@ -89,7 +95,7 @@ class News extends CI_Controller {
         }
         else
         {
-            $this->news_model->set_news($id);
+            $this->news_model->set_news($user_id);
             //$this->load->view('news/success');
             redirect( base_url() . 'index.php/news');
         }
@@ -97,16 +103,16 @@ class News extends CI_Controller {
     
     public function delete()
     {
-        $id = $this->uri->segment(3);
+        $user_id = $this->uri->segment(3);
         
         if (empty($id))
         {
             show_404();
         }
                 
-        $news_item = $this->news_model->get_news_by_id($id);
+        $news_item = $this->news_model->get_news_by_id($user_id);
         
-        $this->news_model->delete_news($id);        
+        $this->news_model->delete_news($user_id);        
         redirect( base_url() . 'index.php/news');        
     }
 }

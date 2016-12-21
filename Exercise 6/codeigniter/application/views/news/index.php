@@ -39,32 +39,63 @@
 	 border:solid #d0d0d0 1px;
  padding:20px;
 }
+#t4{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 80%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
+#t5{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 80%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
+#t6{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 80%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
+#t7{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 80%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
 </style>
 
 
 
 <center><h2><?php echo $title; ?></h2>
-<table id = 'table' border='1' cellpadding='4'> 
+<table id = 'table' border='1' cellpadding='2'> 
     <tr>
-        <td><strong>Name</strong></td>
-        <td><strong>Nicknames</strong></td>
-        <td><strong>Email Address</strong></td>
-        <td><strong>Contact Number</strong></td>
-        <td><strong>Gender</strong></td>
-		<td><strong>Comment</strong></td>
-        <td><strong>Action</strong></td>
+        <td id = "t1"><strong>Name</strong></td>
+        <td id = "t2"><strong>Nicknames</strong></td>
+        <td id = "t3"><strong>Email Address</strong></td>
+        <td id = "t4"><strong>Contact Number</strong></td>
+        <td id = "t5"><strong>Gender</strong></td>
+		<td id = "t6"><strong>Comment</strong></td>
+        <td id = "t7"><strong>Action</strong></td>
     </tr>
 <?php foreach ($news as $news_item): ?>
         <tr>
             <td><?php echo $news_item['name']; ?></td>
-            <td><?php echo $news_item['nicknames']; ?></td>
+            <td><?php echo $news_item['nickname']; ?></td>
 			<td><?php echo $news_item['email_add']; ?></td>
 			<td><?php echo $news_item['contact_no']; ?></td>
 			<td><?php echo $news_item['gender']; ?></td>
 			<td><?php echo $news_item['comment']; ?></td>
             <td>
-                <center><a href="<?php echo site_url('news/'.$news_item['slug']); ?>">
-View</a> |
+
                 <a href="<?php echo site_url('news/edit/'.$news_item['user_id']);
 ?>">Edit</a> |
                 <a href="<?php echo site_url('news/delete/'.$news_item['user_id']);

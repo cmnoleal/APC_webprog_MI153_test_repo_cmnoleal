@@ -24,6 +24,6 @@
 </style>
         <body id = 'body'>
                 <h1 id = 'title'><center>Who's viewing this?</center></h1>
-               <p id ='links'> <center><a href="<?php echo site_url('news'); ?>">Home</a> | <a href="<?php echo site_url('news/create'); ?>">Add News</a></center></p>
+               <p id ='links'> <center><a href="<?php echo site_url('news'); ?>">Home</a> | <a href="<?php echo site_url('news/create'); ?>">Guest Log</a></center></p>
 </body>
 </html>
