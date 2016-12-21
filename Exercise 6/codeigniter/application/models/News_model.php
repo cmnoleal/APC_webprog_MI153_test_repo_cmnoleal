@@ -26,7 +26,7 @@ class News_model extends CI_Model {
             return $query->result_array();
         }
  
-        $query = $this->db->get_where('news', array('id' => $id));
+        $query = $this->db->get_where('news', array('user_id' => $id));
         return $query->row_array();
     }
     
@@ -37,22 +37,27 @@ class News_model extends CI_Model {
         $slug = url_title($this->input->post('title'), 'dash', TRUE);
  
         $data = array(
-            'title' => $this->input->post('title'),
+            'name' => $this->input->post('name'),
             'slug' => $slug,
-            'text' => $this->input->post('text')
+            'nickname' => $this->input->post('nickname')
+			'email_add' => $this->input->post('email_add'),
+			'contact_no' => $this->input->post('contact_no'),
+			'gender' => $this->input->post('gender'),
+			'comment' => $this->input->post('comment'),
         );
+		
         
         if ($id == 0) {
             return $this->db->insert('news', $data);
         } else {
-            $this->db->where('id', $id);
+            $this->db->where('user_id', $id);
             return $this->db->update('news', $data);
         }
     }
     
     public function delete_news($id)
     {
-        $this->db->where('id', $id);
+        $this->db->where('user_id', $id);
         return $this->db->delete('news');
     }
 }
