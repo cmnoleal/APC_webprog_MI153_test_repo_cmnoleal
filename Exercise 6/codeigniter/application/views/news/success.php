@@ -13,5 +13,5 @@
 }
 </style>
 <body id = 'body'>
-<p id = 'Success'>News added successfully!</p>
+<p id = 'Success'><center>News added successfully!</center></p>
 </body>
