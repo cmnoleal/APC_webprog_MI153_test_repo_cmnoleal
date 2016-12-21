@@ -41,8 +41,11 @@ class News extends CI_Controller {
  
         $data['title'] = 'Create a news item';
  
-        $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('text', 'Text', 'required');
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('nickname', 'Nicknames', 'required');
+		$this->form_validation->set_rules('email_add', 'Email Address', 'required');
+        $this->form_validation->set_rules('contact_no', 'Contact Number', 'required');
+		$this->form_validation->set_rules('gender', 'Gender', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
@@ -75,8 +78,7 @@ class News extends CI_Controller {
         $data['title'] = 'Edit a news item';        
         $data['news_item'] = $this->news_model->get_news_by_id($id);
         
-        $this->form_validation->set_rules('title', 'Title', 'required');
-        $this->form_validation->set_rules('text', 'Text', 'required');
+        $this->form_validation->set_rules('name', 'Name', 'required');
  
         if ($this->form_validation->run() === FALSE)
         {
