@@ -1,4 +1,12 @@
 <style>
+	#h1 {
+	font-size:100%;
+	font-family: courier;
+	border-collapse: collapse;
+	width: 100%;
+	border:solid #d0d0d0 1px;
+	padding:20px;
+		}
 #table{
 	    font-size:100%;
     font-family: courier;
@@ -38,20 +46,28 @@
 <center><h2><?php echo $title; ?></h2>
 <table id = 'table' border='1' cellpadding='4'> 
     <tr>
-        <td><strong>Title</strong></td>
-        <td><strong>Content</strong></td>
+        <td><strong>Name</strong></td>
+        <td><strong>Nicknames</strong></td>
+        <td><strong>Email Address</strong></td>
+        <td><strong>Contact Number</strong></td>
+        <td><strong>Gender</strong></td>
+		<td><strong>Comment</strong></td>
         <td><strong>Action</strong></td>
     </tr>
 <?php foreach ($news as $news_item): ?>
         <tr>
-            <td><?php echo $news_item['title']; ?></td>
-            <td><?php echo $news_item['text']; ?></td>
+            <td><?php echo $news_item['name']; ?></td>
+            <td><?php echo $news_item['nicknames']; ?></td>
+			<td><?php echo $news_item['email_add']; ?></td>
+			<td><?php echo $news_item['contact_no']; ?></td>
+			<td><?php echo $news_item['gender']; ?></td>
+			<td><?php echo $news_item['comment']; ?></td>
             <td>
                 <center><a href="<?php echo site_url('news/'.$news_item['slug']); ?>">
 View</a> |
-                <a href="<?php echo site_url('news/edit/'.$news_item['id']);
+                <a href="<?php echo site_url('news/edit/'.$news_item['user_id']);
 ?>">Edit</a> |
-                <a href="<?php echo site_url('news/delete/'.$news_item['id']);
+                <a href="<?php echo site_url('news/delete/'.$news_item['user_id']);
 ?>" onClick="return confirm('Are you sure you want to delete?')">Delete</a></center>
             </td>
         </tr>
