@@ -2,18 +2,46 @@
 <h2><?php echo $title; ?></h2>
 <?php echo validation_errors(); ?>
 <?php echo form_open('news/create'); ?>    
-    <table>
+<style>
+#table{
+	    font-size:100%;
+    font-family: courier;
+    border-collapse: collapse;
+    width: 100%;
+	 border:solid #d0d0d0 1px;
+ padding:20px;
+}
+
+</style>    
+<table id = 'table'>
         <tr>
-            <td><label for="title">Nigga</label></td>
+            <td><label for="name">Name:</label></td>
             <td><input type="input" name="title" size="50" /></td>
         </tr>
         <tr>
-            <td><label for="text">Text</label></td>
-            <td><textarea name="text" rows="10" cols="40"></textarea></td>
+            <td><label for="nickname">Nicknames:</label></td>
+            <td><textarea name="text" rows="4" cols="44.5"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="email_add">Email address:</label></td>
+            <td><input type="input" name="title" size="50" /></td>
+        </tr>
+        <tr>
+            <td><label for="contact_no">Contact number:</label></td>
+            <td><input type="input" name="title" size="50" /></td>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender:</label></td>
+            <td><input type="input" name="title" size="1	" /></td>
+        </tr>
+		</tr>
+        <tr>
+            <td><label for="comment">Comment:</label></td>
+            <td><input type="input" name="title" size="1	" /></td>
         </tr>
         <tr>
             <td></td>
-            <td><input type="submit" name="submit" value="Create news item"
+            <td><input type="submit" name="submit" value="Add account"
 /></td>
         </tr>
     </table>   </center>
