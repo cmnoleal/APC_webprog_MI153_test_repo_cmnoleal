@@ -1,6 +1,6 @@
 <html>
         <head>
-                <title>CodeIgniter Tutorial</title>
+                <title> The Carl's Page</title>
         </head>
 <style>
 #body{
@@ -16,7 +16,7 @@
 	background-color:black;
 }
 #links{
-		font-family:courier;
+	font-family:courier;
 	font-size:20px;
 	color:white;
 	background-color:black;
