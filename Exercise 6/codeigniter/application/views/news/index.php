@@ -147,7 +147,7 @@
     <td id="SW"; style = "color:white;"><center>What do I do when I'm inspired?</center>
     <center><button type="button"; style = "background-color:black;color:White;font-family:courier;font-size:100%" onclick="document.getElementById('SW').innerHTML = 'Song Writing!'">Want to know?!</button></center>
     </td>
-    <td><img src="SW.jpg" alt = "Song Writing" style ="width:550px;height:200;"></td>
+    <td><img src="http://localhost/exercise6/codeigniter/images/SW.jpg" alt = "Song Writing" style ="width:550px;height:300;"></td>
  </tr>
 
   <tr>
@@ -155,7 +155,7 @@
     <center><button type="button"; style = "background-color:black;color:White;font-family:courier;font-size:100%" onclick="document.getElementById('AG').innerHTML = 'Acoustic Guitar!'">Want to know?!</button></center>
     </td>
     <td> 
-	<img src="AG.jpg" alt = "Acoustic Guitar" style ="width:550px;height:200;">
+	<img src="http://localhost/exercise6/codeigniter/images/AG.jpg" alt = "Acoustic Guitar" style ="width:550px;height:300;">
     </td>
   </tr>
 
@@ -164,7 +164,7 @@
    <center> <button type="button"; style = "background-color:black;color:White;font-family:courier;font-size:100%" onclick="document.getElementById('Band').innerHTML = 'The 1975!'">Want to know?!</button></center>
     </td>
     <td>
-	<img id = "THE"; src="1975.jpg" alt = "The 1975" style ="width:550px;height:200;">
+	<img id = "THE"; src="http://localhost/exercise6/codeigniter/images/1975.jpg" alt = "The 1975" style ="width:550px;height:300;">
     </td>
   </tr>
 
@@ -173,7 +173,7 @@
    <center> <button type="button"; style = "background-color:black;color:White;font-family:courier;font-size:100%" onclick="document.getElementById('web').innerHTML ='9gag I think? Hmm.'">Want to know?!</button></center>
     </td>
     <td>
-	<img id = "9gag"; src="9gag.png" alt = "9gag" style ="width:550px;height:200;">
+	<img id = "9gag"; src="http://localhost/exercise6/codeigniter/images/9gag.png" alt = "9gag" style ="width:550px;height:300;">
     </td>
   </tr>
 </table>
