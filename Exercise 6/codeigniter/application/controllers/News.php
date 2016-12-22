@@ -105,7 +105,7 @@ class News extends CI_Controller {
     {
         $user_id = $this->uri->segment(3);
         
-        if (empty($id))
+        if (empty($user_id))
         {
             show_404();
         }
